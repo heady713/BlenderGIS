@@ -208,8 +208,8 @@ SOURCES = {
 
 
 	"GAODE" : {
-		"name" : '高德-矢量地图',
-		"description" : '带底图和路网的高德地图',
+		"name" : '高德瓦片地图',
+		"description" : '带底图和路网的高德XYZ瓦片地图',
 		"service": 'TMS',
 		"grid": 'WM',
 		"quadTree": False,
@@ -222,6 +222,24 @@ SOURCES = {
 		"referer": ""
 	},
 
+
+	"GOOGLE-CN" : {
+		"name" : '谷歌中国地图',
+		"description" : '谷歌XYZ瓦片地图',
+		"service": 'TMS',
+		"grid": 'WM',
+		"quadTree": False,
+		"layers" : {
+			"SAT" : {"urlKey" : 's', "name" : '卫星地图', "style" : '', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+			"SAT2" : {"urlKey" : 'y', "name" : '卫星地图带标记', "style" : '', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+			"MAP" : {"urlKey" : 'm', "name" : '矢量地图', "style" : '', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+			"MAP2" : {"urlKey" : 'r', "name" : '矢量地图带地形', "style" : '', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+			"STR" : {"urlKey" : 'h', "name" : '路网', "style" : '', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+			"TER" : {"urlKey" : 't', "name" : '地形', "style" : '', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+		},
+		"urlTemplate": "http://mt2.google.cn/vt/lyrs={LAY}&hl=zh-CN&gl=cn&x={X}&y={Y}&z={Z}",
+		"referer": ""
+	},
 
 	###############
 	# WMS examples
