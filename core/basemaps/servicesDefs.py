@@ -207,6 +207,22 @@ SOURCES = {
 	},
 
 
+	"GAODE" : {
+		"name" : '高德-矢量地图',
+		"description" : '带底图和路网的高德地图',
+		"service": 'TMS',
+		"grid": 'WM',
+		"quadTree": False,
+		"layers" : {
+			"SAT" : {"urlKey" : 'webst04', "name" : '卫星地图', "style" : '7', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+			"MAP" : {"urlKey" : 'wprd04', "name" : '矢量地图', "style" : '6', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17},
+			"STR" : {"urlKey" : 'wprd04', "name" : '路网', "style" : '8', "description" : '', "format" : 'png', "zmin" : 3, "zmax" : 17}
+		},
+		"urlTemplate": "https://{LAY}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=1&style={STYLE}&x={X}&y={Y}&z={Z}",
+		"referer": ""
+	},
+
+
 	###############
 	# WMS examples
 	###############
